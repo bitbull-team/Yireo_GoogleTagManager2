@@ -22,6 +22,9 @@
     "autoload": {
         "files": [
             "registration.php"
-        ]
+        ],
+        "psr-4": {
+            "Yireo\\GoogleTagManager2\\": ""
+        }
     }
 }
