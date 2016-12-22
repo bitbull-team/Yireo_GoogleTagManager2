@@ -10,7 +10,7 @@
 ?>
 <?php if($this->isEnabled()) : ?>
     <?php $customer = $this->getCustomer(); ?>
-    <?php $customerGroup = $this->getCustomerGroup(); ?>
+
     <?php if(!empty($customer) && $customer->getId() > 0) : ?>
         <?php $this->addAttribute('customerLoggedIn', 1); ?>
         <?php $this->addAttribute('customerId', $customer->getId()); ?>
@@ -18,6 +18,8 @@
         <?php $this->addAttribute('customerLoggedIn', 0); ?>
         <?php $this->addAttribute('customerId', 0); ?>
     <?php endif; ?>
+    <?php $customerGroup = $this->getCustomerGroup();if(!empty($customerGroup) && $customerGroup->getId() > 0) : ?>
     <?php $this->addAttribute('customerGroupId', $customerGroup->getId()); ?>
     <?php $this->addAttribute('customerGroupCode', strtoupper($customerGroup->getCustomerGroupCode())); ?>
+    <?php endif; ?>
 <?php endif; ?>

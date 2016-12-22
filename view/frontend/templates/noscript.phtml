@@ -1,0 +1,16 @@
+<?php
+/**
+ * GoogleTagManager plugin for Magento
+ *
+ * @package     Yireo_GoogleTagManager
+ * @author Andra Lungu <andra.lungu@bitbull.it>
+ * @copyright   Copyright (c) 2014 Yireo (http://www.yireo.com/)
+ * @license     Open Software License
+ */
+
+?>
+<?php if ($this->isEnabled()) : ?>
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=<?= $this->getId(); ?>" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+<?php endif; ?>
